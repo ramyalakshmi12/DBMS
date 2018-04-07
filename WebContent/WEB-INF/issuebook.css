@@ -1,0 +1,154 @@
+@CHARSET "ISO-8859-1";
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+body
+    {
+    width: 100%;
+    height: 100%;
+    background-image:url(https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1682&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D);
+    background-size: cover;
+    }
+
+main {
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  padding: 1em 2vw;
+  margin: 1em 2vw;
+  color: #000;
+  background-color: #89A4BC     ;
+  border: 0.15em solid #631744  ;
+  border-radius: 2.5em;
+}
+
+table {
+  margin: 1em 0;
+  border-collapse: collapse;
+/*   width: 100%; */
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  padding: 0.25em 0.5em 0.5em 0.5em;
+}
+
+th,
+td {
+  padding: 0.25em 0.5em 0.25em 1em;
+  vertical-align: text-top;
+  text-align: left;
+  text-indent: -0.5em;
+}
+
+th {
+  vertical-align: bottom;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: bold;
+}
+
+td::before {
+  display: none;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+td:nth-of-type(2) {
+  font-style: italic;
+}
+
+th:nth-of-type(3),
+td:nth-of-type(3) {
+  text-align: right;
+}
+
+div {
+  overflow: auto;
+}
+
+@media screen and (max-width: 37em), print and (max-width: 5in) {
+  table,
+  tr,
+  td {
+    display: block;
+  }
+  tr {
+    padding: 0.7em 2vw;
+  }
+  th,
+  tr:first-of-type {
+    display: none;
+  }
+  td::before {
+    display: inline;
+    font-weight: bold;
+  }
+  td {
+    display: grid;
+    grid-template-columns: 4em auto;
+    grid-gap: 1em 0.5em;
+  }
+  caption {
+    font-style: normal;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    font-weight: bold;
+  }
+  td:nth-of-type(3) {
+    text-align: left;
+  }
+  td:nth-of-type(2)::before {
+    font-style: normal;
+  }
+}
+
+@media print {
+  body {
+    font-size: 6pt;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+  }
+  body,
+  main {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: none;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+  div {
+    overflow: visible;
+  }
+  th {
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1pt solid #000;
+  }
+  tr {
+    border-top: 1pt solid #000;
+  }
+}
+
+@media print and (max-width: 5in) {
+  caption {
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1pt solid #000;
+  }
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+  }
+}
